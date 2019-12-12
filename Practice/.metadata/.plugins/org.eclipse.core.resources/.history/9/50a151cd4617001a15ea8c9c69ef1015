@@ -1,0 +1,5 @@
+#Login Page
+
+LoginEmail=//*[@id='username']
+LoginPassword=//*[@id='password']
+LoginButton=//*[text()='Login']

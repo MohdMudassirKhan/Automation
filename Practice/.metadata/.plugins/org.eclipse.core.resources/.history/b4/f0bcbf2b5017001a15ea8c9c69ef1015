@@ -1,0 +1,3 @@
+Url=https://preprod-taubman.parkcharge.com.au/public/home.htm
+#use test data excel name with application and environment for easy identification
+TestDataExcelPath=\\Data\\TaubmanPreprodTestData.xlsx

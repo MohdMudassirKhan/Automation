@@ -1,0 +1,2 @@
+url=https://preprod-taubman.parkcharge.com.au/public/home.htm
+TestDataExcelPath=System.getProperty("user.dir") + "\\Data\\TestData.xlsx"

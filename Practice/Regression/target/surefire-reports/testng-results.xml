@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="14805" started-at="2019-12-11T11:44:01Z" finished-at="2019-12-11T11:44:15Z">
+    <groups>
+    </groups>
+    <test name="TaubmanLogin" duration-ms="14805" started-at="2019-12-11T11:44:01Z" finished-at="2019-12-11T11:44:15Z">
+      <class name="ParkCharge.Regression.TaubmanPrepod">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:ParkCharge.Regression.TaubmanPrepod@2b98378d]" name="beforeSuite" is-config="true" duration-ms="15442" started-at="2019-12-11T17:13:45Z" finished-at="2019-12-11T17:14:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="launch()[pri:0, instance:ParkCharge.Regression.TaubmanPrepod@2b98378d]" name="launch" duration-ms="14793" started-at="2019-12-11T17:14:01Z" finished-at="2019-12-11T17:14:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launch -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:ParkCharge.Regression.TaubmanPrepod@2b98378d]" name="afterSuite" is-config="true" duration-ms="2041" started-at="2019-12-11T17:14:15Z" finished-at="2019-12-11T17:14:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- ParkCharge.Regression.TaubmanPrepod -->
+    </test> <!-- TaubmanLogin -->
+  </suite> <!-- Suite -->
+</testng-results>
