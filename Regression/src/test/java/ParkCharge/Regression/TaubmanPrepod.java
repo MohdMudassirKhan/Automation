@@ -67,7 +67,8 @@ public class TaubmanPrepod extends TestBase {
 	  Thread.sleep(2000);
 	  //Payment Details Page
 	  driver.findElement(By.xpath(obj.getProperty("VDP_NextStep"))).click();
-	  Thread.sleep(2000);
+	  Thread.sleep(3000);
+	  driver.findElement(By.xpath(obj.getProperty("PDP_NextStep"))).click();
 	  driver.findElement(By.xpath(obj.getProperty("CardNumber"))).sendKeys(getData(0,14,1));
 	  driver.findElement(By.xpath(obj.getProperty("CardName"))).sendKeys(getData(0,15,1));	  
 	  Select selectOne = new Select(driver.findElement(By.xpath(obj.getProperty("ExpiryMonth"))));
