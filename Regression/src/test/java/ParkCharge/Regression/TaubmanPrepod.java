@@ -139,7 +139,7 @@ public class TaubmanPrepod extends TestBase {
 
   @AfterMethod
   public void afterMethod() {
-	  //driver.close();
+	  driver.close();
   }
 
 }
