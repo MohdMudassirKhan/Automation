@@ -9,6 +9,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -138,7 +139,10 @@ public class TaubmanPrepod extends TestBase {
   }
 
   @AfterMethod
-  public void afterMethod() {
+  public void afterMethod(ITestResult result) {
+	  if (ITestResult.FAILURE==result.getStatus()) {
+		  screenshot(result);
+	  }
 	  driver.close();
   }
 

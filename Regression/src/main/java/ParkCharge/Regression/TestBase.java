@@ -1,10 +1,16 @@
 package ParkCharge.Regression;
 
+import java.awt.Rectangle;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+
+import javax.imageio.ImageIO;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -12,6 +18,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.ITestResult;
 
 public class TestBase 
 {
@@ -20,10 +27,9 @@ public class TestBase
 	static WebDriver driver = null;
     static XSSFWorkbook wb;
     static XSSFSheet sheet;
+    static String path = System.getProperty("user.dir");
     
-    public void init(String browser, String application) throws IOException {
-    	//project path
-    	String path = System.getProperty("user.dir");
+    public void init(String browser, String application) throws IOException {	
     	//configuration file loading
 		FileInputStream configfile = new FileInputStream(path+"\\configs\\"+application+".properties");
 		config.load(configfile);
@@ -51,19 +57,17 @@ public class TestBase
     	
     }
      
-    public String getData(int sheetnumber, int row, int column)
-    {
-    //Count sheet number, row and column from 0.	
-    sheet = wb.getSheetAt(sheetnumber);
-    String data = sheet.getRow(row).getCell(column).getStringCellValue();
-    return data;
+    public String getData(int sheetnumber, int row, int column) {
+    	//Count sheet number, row and column from 0.	
+    	sheet = wb.getSheetAt(sheetnumber);
+    	String data = sheet.getRow(row).getCell(column).getStringCellValue();
+    	return data;
     }
      
-    public int getRowCount(int sheetIndex)
-    {
-    int row = wb.getSheetAt(sheetIndex).getLastRowNum();
-    row = row + 1;
-    return row;
+    public int getRowCount(int sheetIndex) {
+    	int row = wb.getSheetAt(sheetIndex).getLastRowNum();
+    	row = row + 1;
+    	return row;
     }
     
     public String MailCheckMailinator(String url, String Custmail) throws InterruptedException {  
@@ -85,4 +89,30 @@ public class TestBase
 	    driver.switchTo().window(windowHandle);
     	return code;
     }
+    
+    public void screenshot(ITestResult result) { 	
+    	try {
+    		BufferedImage image = new Robot().createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
+    		new File(path+"\\target\\Screenshots\\").mkdir();
+    		ImageIO.write(image, "jpg", new File(path + "\\target\\Screenshots\\"+result.getName()+".jpg"));
+    		System.out.println("Screenshot taken at"+path+"\\target\\Screenshots\\"+result.getName()+".jpg");    
+    	}
+    	catch( Exception e ) {
+    		System.out.println("Exception while taking screenshot "+e.getMessage());
+    	}
+    	 
+    	/* Screenshot without taskbar and header, mainly focussed in application area only
+    	try 
+    	{
+    		TakesScreenshot ts=(TakesScreenshot)driver;
+    		File source=ts.getScreenshotAs(OutputType.FILE);
+    		FileUtils.copyFile(source, new File(path+"\\Screenshots\\"+result.getName()+".png"));     
+    		System.out.println("Screenshot taken at"+path+"\\Screenshots\\"+result.getName()+".png");
+    	} 
+    	catch (Exception e)
+    	{
+    		System.out.println("Exception while taking screenshot "+e.getMessage());
+    	}
+    	*/   
+    }    
 }
