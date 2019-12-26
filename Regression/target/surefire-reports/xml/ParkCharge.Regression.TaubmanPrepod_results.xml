@@ -1,21 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="TaubmanBasic"
-           tests="1"
-           failures="1"
+           tests="5"
+           failures="2"
            errors="0"
-           skipped="0"
-           time="50.360">
+           skipped="3"
+           time="0.041">
   <properties />
-            <testcase name="signUp" time="50.360" classname="ParkCharge.Regression.TaubmanPrepod">
-                <failure type="java.lang.IllegalStateException"
-                  message="Cannot get a text value from a numeric cell"
+            <testcase name="afterMethod" time="0.000" classname="ParkCharge.Regression.TaubmanPrepod">
+                <failure type="org.openqa.selenium.WebDriverException"
+                  message="chrome not reachable
+  (Session info: chrome=79.0.3945.88)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;CDN190&apos;, ip: &apos;172.20.1.190&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\MUDASS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49697}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f5958c106ddce36735385874b1dd438b"
               >
-<![CDATA[java.lang.IllegalStateException: Cannot get a text value from a numeric cell
-  org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:855)
-  org.apache.poi.xssf.usermodel.XSSFCell.getRichStringCellValue(XSSFCell.java:299)
-  org.apache.poi.xssf.usermodel.XSSFCell.getStringCellValue(XSSFCell.java:251)
-  ParkCharge.Regression.TestBase.getData(TestBase.java:64)
-  ParkCharge.Regression.TaubmanPrepod.signUp(TaubmanPrepod.java:56)
+<![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=79.0.3945.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'CDN190', ip: '172.20.1.190', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\MUDASS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49697}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f5958c106ddce36735385874b1dd438b
+  sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+  sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+  sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+  java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+  org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+  org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+  org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+  org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+  org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+  org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
+  ParkCharge.Regression.TaubmanPrepod.afterMethod(TaubmanPrepod.java:146)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+  org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+  org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:786)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+  org.testng.TestRunner.privateRun(TestRunner.java:767)
+  org.testng.TestRunner.run(TestRunner.java:617)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+  org.testng.SuiteRunner.run(SuiteRunner.java:254)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+  org.testng.TestNG.run(TestNG.java:1057)
+  org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:281)
+  org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+  org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:121)
+  org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+  org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+  org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="modify" time="0.041" classname="ParkCharge.Regression.TaubmanPrepod">
+                <failure type="org.openqa.selenium.NoSuchWindowException"
+                  message="no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=79.0.3945.88)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;CDN190&apos;, ip: &apos;172.20.1.190&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\MUDASS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49697}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f5958c106ddce36735385874b1dd438b
+*** Element info: {Using=xpath, value=//*[@id=&apos;username&apos;]}"
+              >
+<![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=79.0.3945.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'CDN190', ip: '172.20.1.190', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\MUDASS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49697}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f5958c106ddce36735385874b1dd438b
+*** Element info: {Using=xpath, value=//*[@id='username']}
+  sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+  sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+  sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+  java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+  org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+  org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+  org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+  org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+  org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+  org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+  org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+  ParkCharge.Regression.TaubmanPrepod.modify(TaubmanPrepod.java:26)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -48,6 +137,15 @@
 
           </testcase>
   
+            <testcase name="afterMethod" time="0.0" classname="ParkCharge.Regression.TaubmanPrepod">
+          <skipped />
+    </testcase>
+            <testcase name="beforeMethod" time="0.0" classname="ParkCharge.Regression.TaubmanPrepod">
+          <skipped />
+    </testcase>
+            <testcase name="signUp" time="0.0" classname="ParkCharge.Regression.TaubmanPrepod">
+          <skipped />
+    </testcase>
   
   
 </testsuite>

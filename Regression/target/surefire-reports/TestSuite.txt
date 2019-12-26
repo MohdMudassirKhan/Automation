@@ -1,8 +1,28 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 87.808 sec <<< FAILURE! - in TestSuite
-signUp(ParkCharge.Regression.TaubmanPrepod)  Time elapsed: 50.364 sec  <<< FAILURE!
-java.lang.IllegalStateException: Cannot get a text value from a numeric cell
-	at ParkCharge.Regression.TaubmanPrepod.signUp(TaubmanPrepod.java:56)
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 3, Time elapsed: 15.67 sec <<< FAILURE! - in TestSuite
+modify(ParkCharge.Regression.TaubmanPrepod)  Time elapsed: 0.046 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=79.0.3945.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'CDN190', ip: '172.20.1.190', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\MUDASS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49697}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f5958c106ddce36735385874b1dd438b
+*** Element info: {Using=xpath, value=//*[@id='username']}
+	at ParkCharge.Regression.TaubmanPrepod.modify(TaubmanPrepod.java:26)
+
+afterMethod(ParkCharge.Regression.TaubmanPrepod)  Time elapsed: 2.303 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+chrome not reachable
+  (Session info: chrome=79.0.3945.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'CDN190', ip: '172.20.1.190', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\MUDASS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49697}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f5958c106ddce36735385874b1dd438b
+	at ParkCharge.Regression.TaubmanPrepod.afterMethod(TaubmanPrepod.java:146)
 

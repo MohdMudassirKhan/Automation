@@ -5,9 +5,10 @@
     <classes>
       <class name="ParkCharge.Regression.TaubmanPrepod">
         <methods>
+          <include name="modify"/>
           <include name="signUp"/>
-          <include name="beforeSuite"/>
-          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
         </methods>
       </class> <!-- ParkCharge.Regression.TaubmanPrepod -->
     </classes>
