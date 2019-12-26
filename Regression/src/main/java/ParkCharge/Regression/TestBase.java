@@ -1,5 +1,7 @@
 package ParkCharge.Regression;
 
+
+import java.awt.Desktop;
 import java.awt.Rectangle;
 import java.awt.Robot;
 import java.awt.Toolkit;
@@ -7,6 +9,9 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.nio.file.Paths;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -15,6 +20,7 @@ import javax.imageio.ImageIO;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -75,17 +81,23 @@ public class TestBase
 		WebDriver handle = new ChromeDriver();
 		handle.manage().window().maximize();
 		handle.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		handle.get(url);
-		handle.findElement(By.xpath("//*[@placeholder='Enter Public Mailinator Inbox']")).sendKeys(Custmail);
-		handle.findElement(By.xpath("//*[@id='go-to-public']")).click();
-		Thread.sleep(5000);
-		handle.findElement(By.xpath("//*[contains(text(),'Your verification code')]")).click();
-		handle.switchTo().frame("msg_body");
-    	String codeLine = handle.findElement(By.xpath("//*[contains(text(),'Your verification code')]")).getText();
-    	String[] arrSplit = codeLine.split(" ");
-    	String code = arrSplit[4].substring(0, arrSplit[4].length() - 1);
-    	Thread.sleep(2000);
-    	handle.close();
+		try {
+			handle.get(url);
+			handle.findElement(By.xpath("//*[@placeholder='Enter Public Mailinator Inbox']")).sendKeys(Custmail);
+			handle.findElement(By.xpath("//*[@id='go-to-public']")).click();
+			Thread.sleep(5000);
+			handle.findElement(By.xpath("//*[contains(text(),'Your verification code')]")).click();
+			handle.switchTo().frame("msg_body");
+		} catch (Exception e) {
+			System.out.println("Mailinator element given exception, Failure in Mailinator.");
+			handle.close();
+			e.printStackTrace();
+		}
+		String codeLine = handle.findElement(By.xpath("//*[contains(text(),'Your verification code')]")).getText();
+		String[] arrSplit = codeLine.split(" ");
+		String code = arrSplit[4].substring(0, arrSplit[4].length() - 1);
+		Thread.sleep(2000);
+		handle.close();
 	    driver.switchTo().window(windowHandle);
     	return code;
     }
@@ -95,7 +107,7 @@ public class TestBase
     		BufferedImage image = new Robot().createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
     		new File(path+"\\target\\Screenshots\\").mkdir();
     		ImageIO.write(image, "jpg", new File(path + "\\target\\Screenshots\\"+result.getName()+".jpg"));
-    		System.out.println("Screenshot taken at"+path+"\\target\\Screenshots\\"+result.getName()+".jpg");    
+    		System.out.println("Screenshot taken is "+path+"\\target\\Screenshots\\"+result.getName()+".jpg");    
     	}
     	catch( Exception e ) {
     		System.out.println("Exception while taking screenshot "+e.getMessage());
@@ -114,5 +126,5 @@ public class TestBase
     		System.out.println("Exception while taking screenshot "+e.getMessage());
     	}
     	*/   
-    }    
+    } 
 }
