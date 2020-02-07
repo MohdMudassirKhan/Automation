@@ -13,9 +13,21 @@ import org.testng.annotations.AfterMethod;
 
 public class Testing extends TestBase {
   @Test
-  public void Demo() throws InterruptedException {	  
+  public void demoFail() throws InterruptedException {	  
 	
 	  driver.findElementByAccessibilityId("Search message").click(); 
+	  driver.findElementById("com.google.android.apps.messaging:id/search_src_text").sendKeys(getData(0,1,1)); 
+      /* MobileElement el2 = (MobileElement) driver.findElementByAccessibilityId("Search messages");
+	  el2.click();
+	  MobileElement el3 = (MobileElement) driver.findElementById("com.google.android.apps.messaging:id/search_src_text");
+	  el3.sendKeys("Demo"); */
+	  Thread.sleep(2000);
+  }
+  
+  @Test
+  public void demoPass() throws InterruptedException {	  
+	
+	  driver.findElementByAccessibilityId("Search messages").click(); 
 	  driver.findElementById("com.google.android.apps.messaging:id/search_src_text").sendKeys(getData(0,1,1)); 
       /* MobileElement el2 = (MobileElement) driver.findElementByAccessibilityId("Search messages");
 	  el2.click();
