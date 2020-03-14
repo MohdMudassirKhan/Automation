@@ -7,6 +7,8 @@ import Demo.Sample.TestBase;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.sqlite.date.ExceptionUtils;
+import org.testng.IDynamicGraph.Status;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -60,6 +62,7 @@ public class TestListener extends TestBase implements ITestListener {
         //ExtentReports log and screenshot operations for failed tests.
         ExtentTestManager.getTest().log(LogStatus.FAIL, "Test Failed",
             ExtentTestManager.getTest().addBase64ScreenShot(base64Screenshot));
+        ExtentTestManager.getTest().log(LogStatus.FAIL, "StackTrace Result: " + iTestResult.getThrowable().toString());
     }
  
     @Override
