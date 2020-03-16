@@ -12,6 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class TestBase 
 {
@@ -21,7 +22,7 @@ public class TestBase
     static XSSFSheet sheet;
     static String path = System.getProperty("user.dir");
     
-    public void init(String application) throws IOException {	
+    public void init(String application, String browser) throws IOException {	
     	//configuration file loading
 		FileInputStream configfile = new FileInputStream(path+"\\configs\\"+application+".properties");
 		config.load(configfile);
@@ -31,18 +32,18 @@ public class TestBase
 	    FileInputStream fis = new FileInputStream(src);
 	    wb = new XSSFWorkbook(fis);
 		
-    	//if (browser.equals("chrome")) {
+    	if (browser.equalsIgnoreCase("chrome")) {
     		System.setProperty("webdriver.chrome.driver", path + "\\resources\\chromedriver.exe");
     		driver = new ChromeDriver();
     		driver.manage().window().maximize();
     		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-    	//}
-    	/*else if (browser.equals("firefox")) {
+    	}
+    	else if (browser.equalsIgnoreCase("firefox")) {
     		System.setProperty("webdriver.gecko.driver", path + "\\resources\\geckodriver.exe");  		
     		driver = new FirefoxDriver();
     		driver.manage().window().maximize();
     		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-    	}*/
+    	}
     	
     }
      

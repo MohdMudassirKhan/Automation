@@ -9,18 +9,20 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">BasicDemo</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">61,217</td><td></td><td></td></tr>
+<tr><td><a href="#t0">BasicDemoFirefox</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">70,110</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">BasicDemoChrome</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">66,105</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">2</th><th class="num">0</th><th class="num">0</th><th class="num attn">2</th><th class="num">136,215</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">BasicDemo &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Demo.Sample.Automation</td><td><a href="#m0">DemoFail</a></td><td rowspan="1">1584191514166</td><td rowspan="1">24472</td></tr><tr><th colspan="4">BasicDemo &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Demo.Sample.Automation</td><td><a href="#m1">DemoPass</a></td><td rowspan="1">1584191494599</td><td rowspan="1">4685</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">BasicDemoFirefox &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Demo.Sample.Automation</td><td><a href="#m0">DemoFail</a></td><td rowspan="1">1584351608899</td><td rowspan="1">24466</td></tr><tr><th colspan="4">BasicDemoFirefox &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Demo.Sample.Automation</td><td><a href="#m1">DemoPass</a></td><td rowspan="1">1584351584722</td><td rowspan="1">4750</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">BasicDemoChrome &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Demo.Sample.Automation</td><td><a href="#m2">DemoFail</a></td><td rowspan="1">1584351675584</td><td rowspan="1">24331</td></tr><tr><th colspan="4">BasicDemoChrome &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Demo.Sample.Automation</td><td><a href="#m3">DemoPass</a></td><td rowspan="1">1584351653998</td><td rowspan="1">4433</td></tr></tbody>
 </table>
-<h2>BasicDemo</h2><h3 id="m0">Demo.Sample.Automation#DemoFail</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void Demo.Sample.Automation.DemoFail(java.lang.reflect.Method) throws java.lang.InterruptedException</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;input[value=&apos;Log I&apos;]&quot;}
-  (Session info: chrome=80.0.3987.132)
+<h2>BasicDemoFirefox</h2><h3 id="m0">Demo.Sample.Automation#DemoFail</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void Demo.Sample.Automation.DemoFail(java.lang.reflect.Method) throws java.lang.InterruptedException</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to locate element: input[value=&apos;Log I&apos;]
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;MUDASSIR&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.132, chrome: {chromedriverVersion: 80.0.3987.16 (320f6526c1632..., userDataDir: C:\Users\MUHAMM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54955}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 7a2b64840d88a051643d1c2e1249f83b
+System info: host: &apos;CDN190&apos;, ip: &apos;10.8.0.16&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 73.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200207195153, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 8624, moz:profile: C:\Users\mudassirkhan\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 6.1, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 86e6d0bd-e098-4aaa-b439-75d6abe615c7
 *** Element info: {Using=css selector, value=input[value=&apos;Log I&apos;]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
@@ -33,9 +35,33 @@ Session ID: 7a2b64840d88a051643d1c2e1249f83b
 	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at PageObjects.HomePage.logIn(HomePage.java:32)
-	at Demo.Sample.Automation.DemoFail(Automation.java:43)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+	at Demo.Sample.Automation.DemoFail(Automation.java:44)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m1">Demo.Sample.Automation#DemoPass</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void Demo.Sample.Automation.DemoPass(java.lang.reflect.Method) throws java.lang.InterruptedException</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>BasicDemoChrome</h2><h3 id="m2">Demo.Sample.Automation#DemoFail</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void Demo.Sample.Automation.DemoFail(java.lang.reflect.Method) throws java.lang.InterruptedException</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;input[value=&apos;Log I&apos;]&quot;}
+  (Session info: chrome=80.0.3987.132)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;CDN190&apos;, ip: &apos;10.8.0.16&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.132, chrome: {chromedriverVersion: 80.0.3987.16 (320f6526c1632..., userDataDir: C:\Users\MUDASS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55507}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b2a38eb29030a24cd0eabbf9fa80a784
+*** Element info: {Using=css selector, value=input[value=&apos;Log I&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at PageObjects.HomePage.logIn(HomePage.java:32)
+	at Demo.Sample.Automation.DemoFail(Automation.java:44)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">Demo.Sample.Automation#DemoPass</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void Demo.Sample.Automation.DemoPass(java.lang.reflect.Method) throws java.lang.InterruptedException</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

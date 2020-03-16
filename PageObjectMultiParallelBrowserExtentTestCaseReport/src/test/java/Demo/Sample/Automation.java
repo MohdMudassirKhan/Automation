@@ -6,6 +6,7 @@ import PageObjects.HomePage;
 import Utils.ExtentReports.ExtentTestManager;
 
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -17,7 +18,7 @@ import org.testng.annotations.AfterMethod;
 		//browser value can be chrome, firefox.
 		//String browser = "chrome";
 		//give application name with environment for easy identification.
-		String application = "Demo";
+	  String application = "Demo";
 		
 	  @Test (priority = 0,description = "Facebook homepage passing scenario for demo")
 	  public void DemoPass(Method method) throws InterruptedException {
@@ -43,9 +44,10 @@ import org.testng.annotations.AfterMethod;
 		  HomePage.logIn(driver).click();
 	   }
 	  
+	  @Parameters("browser")
 	  @BeforeMethod
-	  public void beforeMethod() throws IOException {
-		  init(application);
+	  public void beforeMethod(String browser) throws IOException {
+		  init(application,browser);
 		  driver.get(config.getProperty("Url"));
 	  }
 

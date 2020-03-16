@@ -3,7 +3,14 @@
     <listeners>
         <listener class-name="Utils.Listeners.TestListener"/>
     </listeners>
-  <test name="BasicDemo">
+  <test name="BasicDemoFirefox">
+  <parameter name="browser" value="firefox" />
+    <classes>
+      <class name="Demo.Sample.Automation"/>
+    </classes>
+  </test> <!-- Test -->
+    <test name="BasicDemoChrome">
+  <parameter name="browser" value="chrome" />
     <classes>
       <class name="Demo.Sample.Automation"/>
     </classes>
